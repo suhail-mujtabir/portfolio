@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background: linear-gradient(to right,#9c27b0,#13d85f);
+}
+.a{
+    text-align: center;
+}
