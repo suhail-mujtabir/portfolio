@@ -1,11 +1,49 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Times New Roman', Times, serif;
+    margin: 0px;
+    padding: 0px;
 }
 body{
     background: linear-gradient(to right,#9c27b0,#13d85f);
+    background-size: cover;
 }
-.a{
-    text-align: center;
+nav{
+    background: linear-gradient(to right,#9c27b0,#13d85f);
+}
+nav ul{
+    float: left;
+    font-family: serif;
+}
+nav ul li{
+    float: left;
+    list-style: none;
+    position: relative;
+    
+}
+nav ul li a{
+    display: block;
+    color:#222;
+    font-size: 20px ;
+    padding: 24px 12px;
+    text-decoration: none;
+    
+}
+nav ul li ul{
+    display: none;
+    position: absolute;
+
+    border-radius: 0px 0px 6px 6px;
+}
+nav ul li:hover ul{
+    display: block;
+
+}
+nav ul li ul li{
+    width: 160px;
+}
+nav ul li ul li a{
+    padding: 8px 14px;
+}
+nav ul li ul a:hover{
+    background: linear-gradient(to right,#13d85f,#9c27b0);
+    border-radius: 0px 0px 6px 6px;
 }
