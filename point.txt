@@ -1,0 +1,6 @@
+149,746->chrome
+79,747->files
+74,446->e drive
+241,421->virus
+564,247->firefox
+440,256->photo

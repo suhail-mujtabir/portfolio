@@ -1,0 +1,2 @@
+const counter=document.querySelectorAll('.counter-value');const speed=2500;counter.forEach(counter_value=>{const updateCount=()=>{const target=+counter_value.getAttribute('data-target');const count=+counter_value.innerText;var inc=target/speed;if(inc<1){inc=1;}
+if(count<target){counter_value.innerText=(count+inc).toFixed(0);setTimeout(updateCount,1);}else{counter_value.innerText=target;}};updateCount();});
