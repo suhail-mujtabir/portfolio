@@ -210,15 +210,26 @@
                     </div>
                 </section>
                 <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky">
-                    <div class="container"><a href="/" class="nuxt-link-active"></a> <button type="button"
-                            data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
-                            aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><i
-                                class="mdi mdi-menu"></i></button>
-                        <div id="navbarCollapse" class="collapse navbar-collapse navigation">
-                            <ul id="navbar-navlist"> </ul>
-                            <ul class="top-right text-right list-unstyled list-inline mb-0 mt-2 mt-sm-0 nav-social">
-                            </ul>
-                        </div>
+                    <div class="container"><a href="/" aria-current="page"
+                            class="nuxt-link-exact-active nuxt-link-active"><img src="/img/dr1.jpg" style="border-radius:50%; width: 48px; height: 48px;"></a> 
+                            <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"  aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+                            <span class="mdi mdi-menu"><img src="/img/bars-solid.svg"  width="30px" height="20px"></span>
+                            </button>
+                                <div id="navbarCollapse" class="collapse navbar-collapse navigation">
+                                    <ul id="navbar-navlist" class="navbar-nav navbar-nav-link ms-auto">
+                                        <li class="nav-item"><a href="" aria-current="page" class="nav-link nuxt-link-exact-active nuxt-link-active">Home</a> </li>
+                                        <li class="nav-item"><a href="about" aria-current="page" class="nav-link ">About me</a></li>
+                                        <li class="nav-item"><a href="/" aria-current="page" class="nav-link nuxt-link-exact-active nuxt-link-active">Portfolio</a> </li>
+                                        <li class="nav-item"><a href="blog" aria-current="page" class="nav-link nuxt-link-exact-active nuxt-link-active">My Blog</a> </li>
+                                        <li class="nav-item"><a href="/" aria-current="page" class="nav-link nuxt-link-exact-active nuxt-link-active">Contact</a> </li>
+                                    </ul>
+                                    <ul class="top-right text-right list-unstyled list-inline mb-0 mt-2 mt-sm-0 nav-social">
+                                        <li class="list-inline-item me-2"><a href="https://www.facebook.com/suhail.mujtabir/" target="_blank"><img src="/img/facebook.svg" width="30px" height="20px"></a></li>
+                                        <li class="list-inline-item me-2"><a href="https://www.instagram.com/suhail.mujtabir/" target="_blank"><img src="/img/instagram.svg" width="30px" height="20px"></a></li>
+                                        <li class="list-inline-item me-2"><a href="https://t.me/Suhail_Mujtabir" target="_blank"><img src="/img/telegram.svg" width="30px" height="20px"></a></li>
+                                        <li class="list-inline-item me-2"><a href="https://github.com/suhail-mujtabir" target="_blank"><img src="/img/github.svg" width="30px" height="20px"></a></li>
+                                    </ul>
+                                </div>
                     </div>
                 </nav>
                 <section id="services" class="section pb-0 mb-4">
