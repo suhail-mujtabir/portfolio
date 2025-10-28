@@ -1,1 +1,0 @@
-var typed=new Typed('#typed',{stringsElement:'#typed-strings',typeSpeed:90,backSpeed:50, loop:true,strings:document.getElementById('TypedData').dataset.elements.split(','),});

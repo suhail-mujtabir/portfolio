@@ -1,1 +1,0 @@
-window.__JGABRIEL__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1660514246",layout:"homepage",error:a,state:{},serverRendered:true,routePath:b,config:{_app:{basePath:b,assetsPath:"\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"7f76025f"}}}}(null,"\u002F"));
