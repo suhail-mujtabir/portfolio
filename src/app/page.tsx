@@ -4,8 +4,16 @@ import React from 'react';
 import Image from 'next/image';
 import Navbar from './components/Navbar';
 import BackToTop from './components/BackToTop';
+import { useTyped } from './hooks/useTyped';
 
 const Home: React.FC = () => {
+  // Initialize Typed.js
+  const typedRef = useTyped([
+    "And I am passionate about learning!",
+    "I love coding and technology!",
+    "Welcome to my portfolio!"
+  ], 90, 50, true);
+
   return (
     <div>
       <Navbar />
@@ -18,8 +26,8 @@ const Home: React.FC = () => {
                 <Image src="/img/mypic.jpg" alt="Profile picture" width={200} height={200} className="img-fluid rounded-circle" />
                 <h1 className="heading font-36 text-white mt-4">Hello, I&apos;m Suhail Mujtabir Fuad</h1>
                 <h6 className="designation mb-3 text-white">
-                  <span id="TypedData" data-elements="And I am passionate about learning!" className="element"></span>
-                  <span style={{ color: 'springgreen' }} id="typed"></span>
+                  {/* Replace the old Typed.js structure with this */}
+                  <span style={{ color: 'springgreen' }} ref={typedRef}></span>
                 </h6>
               </div>
             </div>

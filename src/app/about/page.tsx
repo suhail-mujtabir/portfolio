@@ -1,11 +1,20 @@
-
-
+// src/app/about/page.tsx
+"use client";
 import React from 'react';
 import Image from 'next/image';
 import Script from 'next/script';
 import Navbar from '../components/Navbar';
+import { useTyped } from '../hooks/useTyped';
+import BackToTop from '../components/BackToTop';
 
 const About: React.FC = () => {
+  // Add the Typed.js hook
+  const typedRef = useTyped([
+    "Technology Enthusiast",
+    "Learner", 
+    "Competitive Programmer"
+  ], 90, 50, true);
+
   return (
     <div>
       <div id="home" className="hero-area position-relative bg-half-120 water" style={{ background: 'url(/img/bg-hero.jpg) center center' }}>
@@ -62,9 +71,9 @@ const About: React.FC = () => {
                     <div className="col-lg-9 col-md-8">
                       <div className="row align-items-end">
                         <div className="col-md-12 text-md-start mt-4 mt-sm-0">
+                          {/* UPDATED: Typed.js section */}
                           <h4 className="heading me-2">
-                            I am a <span id="TypedData" data-elements="Tecnology Enthusiast,Learner,Competitive Programmer" className="element text-primary"></span>
-                            <span id="typed" className="text-primary"></span>
+                            I am a <span ref={typedRef} className="text-primary"></span>
                           </h4>
                           <p className="text-light-muted mt-2">World of software has always been a curiosity. But I didn&apos;t sarted learning before my 17s. </p>
                           <p className="text-light-muted mt-2">Am I late??</p>
@@ -146,17 +155,17 @@ const About: React.FC = () => {
                 <p className="para-desc mx-auto mt-5 text-black">Find me on social media</p>
                 <ul className="list-unstyled mb-0 mt-4 social-icon">
                   <li className="list-inline-item me-1">
-                    <a target="_blank" href="https://github.com/suhail-mujtabir" className="rounded-circle" rel="noreferrer">
-                      <Image src="/img/github.svg" alt="GitHub" width={16} height={16} />
+                    <a target="_blank" href="https://github.com/suhail-mujtabir" className="social-icon-circle" rel="noreferrer">
+                      <Image src="/img/github.svg" alt="GitHub" width={20} height={20} />
                     </a>
-                    <a target="_blank" href="https://www.facebook.com/suhail.mujtabir/" className="rounded-circle" rel="noreferrer">
-                      <Image src="/img/facebook.svg" alt="Facebook" width={16} height={16} />
+                    <a target="_blank" href="https://www.facebook.com/suhail.mujtabir/" className="social-icon-circle" rel="noreferrer">
+                      <Image src="/img/facebook.svg" alt="Facebook" width={20} height={20} />
                     </a>
-                    <a target="_blank" href="https://www.instagram.com/suhail.mujtabir/" className="rounded-circle" rel="noreferrer">
-                      <Image src="/img/instagram.svg" alt="Instagram" width={16} height={16} />
+                    <a target="_blank" href="https://www.instagram.com/suhail.mujtabir/" className="social-icon-circle" rel="noreferrer">
+                      <Image src="/img/instagram.svg" alt="Instagram" width={20} height={20} />
                     </a>
-                    <a target="_blank" href="https://t.me/Suhail_Mujtabir" className="rounded-circle" rel="noreferrer">
-                      <Image src="/img/telegram.svg" alt="Telegram" width={16} height={16} />
+                    <a target="_blank" href="https://t.me/Suhail_Mujtabir" className="social-icon-circle" rel="noreferrer">
+                      <Image src="/img/telegram.svg" alt="Telegram" width={20} height={20} />
                     </a>
                   </li>
                 </ul>
@@ -171,9 +180,8 @@ const About: React.FC = () => {
         </footer>
       </div>
 
-      <a href="#" className="btn btn-icon btn-soft-primary back-to-top">
-        <i data-feather="arrow-up" className="icons"></i>
-      </a>
+      {/* Replace old back-to-top with React component */}
+      <BackToTop />
     </div>
   );
 };

@@ -45,13 +45,13 @@ export default function RootLayout({
         {/* Third-party libraries */}
         <Script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" strategy="beforeInteractive" />
         <Script src="/js/tiny-slider.js" strategy="beforeInteractive" />
-        <Script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" strategy="beforeInteractive" />
+        {/* <Script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" strategy="beforeInteractive" /> */}
         
         {/* Custom scripts - load after all libraries */}
         <Script src="/js/tiny-slider-init.js" strategy="afterInteractive" />
         <Script src="/js/mklb.js" strategy="afterInteractive" />
         <Script src="/js/counter.init.js" strategy="afterInteractive" />
-        <Script src="/js/typed.init.js" strategy="afterInteractive" />
+        {/* <Script src="/js/typed.init.js" strategy="afterInteractive" /> */}
         
         {/* REMOVED THESE LINES: */}
         {/* <Script src="https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js" strategy="beforeInteractive" /> */}
