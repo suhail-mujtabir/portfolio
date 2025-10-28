@@ -1,13 +1,15 @@
+// src/app/page.tsx
 "use client";
 import React from 'react';
 import Image from 'next/image';
 import Navbar from './components/Navbar';
+import BackToTop from './components/BackToTop';
 
 const Home: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <div id="home" className="hero-area position-relative bg-half-120" style={{ backgroundImage: 'url(/img/pdma.jpg)' }}>
+      <div id="home" className="hero-area position-relative bg-half-120 water" style={{ backgroundImage: 'url(/img/pdma.jpg)' }}>
         <div className="bg-overlay"></div>
         <div className="container">
           <div className="row justify-content-center">
@@ -35,17 +37,17 @@ const Home: React.FC = () => {
                 <p className="para-desc mx-auto mt-5 text-black">Find me on social media</p>
                 <ul className="list-unstyled mb-0 mt-4 social-icon">
                   <li className="list-inline-item me-1">
-                    <a target="_blank" href="https://github.com/suhail-mujtabir" className="rounded-circle">
-                      <Image src="/img/github.svg" alt="GitHub" width={16} height={16} />
+                    <a target="_blank" href="https://github.com/suhail-mujtabir" className="social-icon-circle">
+                      <Image src="/img/github.svg" alt="GitHub" width={20} height={20} />
                     </a>
-                    <a target="_blank" href="https://www.facebook.com/suhail.mujtabir/" className="rounded-circle">
-                      <Image src="/img/facebook.svg" alt="Facebook" width={16} height={16} />
+                    <a target="_blank" href="https://www.facebook.com/suhail.mujtabir/" className="social-icon-circle">
+                      <Image src="/img/facebook.svg" alt="Facebook" width={20} height={20} />
                     </a>
-                    <a target="_blank" href="https://www.instagram.com/suhail.mujtabir/" className="rounded-circle">
-                      <Image src="/img/instagram.svg" alt="Instagram" width={16} height={16} />
+                    <a target="_blank" href="https://www.instagram.com/suhail.mujtabir/" className="social-icon-circle">
+                      <Image src="/img/instagram.svg" alt="Instagram" width={20} height={20} />
                     </a>
-                    <a target="_blank" href="https://t.me/Suhail_Mujtabir" className="rounded-circle">
-                      <Image src="/img/telegram.svg" alt="Telegram" width={16} height={16} />
+                    <a target="_blank" href="https://t.me/Suhail_Mujtabir" className="social-icon-circle">
+                      <Image src="/img/telegram.svg" alt="Telegram" width={20} height={20} />
                     </a>
                   </li>
                 </ul>
@@ -59,9 +61,8 @@ const Home: React.FC = () => {
           </div>
         </footer>
       </div>
-      <a href="#" className="btn btn-icon btn-soft-primary back-to-top">
-        <i data-feather="arrow-up" className="icons"></i>
-      </a>
+      
+      <BackToTop />
     </div>
   );
 };

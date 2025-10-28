@@ -1,9 +1,7 @@
+/* src/app/globals.css */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -21,4 +19,110 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Sticky nav styles */
+.nav-sticky {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Social icon hover effects for NAVBAR */
+.social-icon-link {
+  display: inline-block;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.social-icon-link:hover {
+  transform: translateY(-3px) scale(1.1);
+  filter: grayscale(0%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Social icon circles for FOOTER in page.tsx - PERFECTLY CENTERED */
+.social-icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+  margin: 0 6px;
+  text-decoration: none;
+  position: relative;
+}
+
+.social-icon-circle:hover {
+  transform: translateY(-3px) scale(1.1);
+  background-color: springgreen; /* Green background only */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: springgreen;
+}
+
+/* PERFECT CENTERING FOR SVG ICONS */
+.social-icon-circle img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  margin: 0 !important;
+  padding: 0 !important;
+  filter: brightness(0) saturate(100%); /* Keep SVG black/visible */
+}
+
+/* Make sure SVG stays visible on hover */
+.social-icon-circle:hover img {
+  filter: brightness(0) saturate(100%); /* Keep SVG black on green background */
+}
+/* Water ripple effect styles */
+.water {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure the hero section has proper sizing */
+.hero-area {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Make sure the ripple canvas covers the entire hero */
+.water canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Ensure content stays above the ripple effect */
+.hero-area .container {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }

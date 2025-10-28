@@ -1,12 +1,15 @@
+// src/app/components/Navbar.tsx
 "use client";
 
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useStickyNav } from '../hooks/useStickyNav';
 
 const Navbar: React.FC = () => {
   const pathname = usePathname();
+  const isSticky = useStickyNav();
 
   const getLinkClass = (path: string) => {
     // Handle the base path separately
@@ -21,7 +24,10 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav id="navbar" className="navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky">
+    <nav 
+      id="navbar" 
+      className={`navbar navbar-expand-lg fixed-top navbar-custom navbar-light ${isSticky ? 'nav-sticky' : ''}`}
+    >
       <div className="container">
         <Link href="/" aria-current={pathname === '/' ? 'page' : undefined}>
           <Image src="/img/dr1.jpg" alt="Profile" width={48} height={48} style={{ borderRadius: '50%' }} />
@@ -69,22 +75,22 @@ const Navbar: React.FC = () => {
           </ul>
           <ul className="top-right text-right list-unstyled list-inline mb-0 mt-2 mt-sm-0 nav-social">
             <li className="list-inline-item me-2">
-              <a href="https://www.facebook.com/suhail.mujtabir/" target="_blank" rel="noreferrer">
+              <a href="https://www.facebook.com/suhail.mujtabir/" target="_blank" rel="noreferrer" className="social-icon-link">
                 <Image src="/img/facebook.svg" alt="Facebook" width={30} height={20} />
               </a>
             </li>
             <li className="list-inline-item me-2">
-              <a href="https://www.instagram.com/suhail.mujtabir/" target="_blank" rel="noreferrer">
+              <a href="https://www.instagram.com/suhail.mujtabir/" target="_blank" rel="noreferrer" className="social-icon-link">
                 <Image src="/img/instagram.svg" alt="Instagram" width={30} height={20} />
               </a>
             </li>
             <li className="list-inline-item me-2">
-              <a href="https://t.me/Suhail_Mujtabir" target="_blank" rel="noreferrer">
+              <a href="https://t.me/Suhail_Mujtabir" target="_blank" rel="noreferrer" className="social-icon-link">
                 <Image src="/img/telegram.svg" alt="Telegram" width={30} height={20} />
               </a>
             </li>
             <li className="list-inline-item me-2">
-              <a href="https://github.com/suhail-mujtabir" target="_blank" rel="noreferrer">
+              <a href="https://github.com/suhail-mujtabir" target="_blank" rel="noreferrer" className="social-icon-link">
                 <Image src="/img/github.svg" alt="GitHub" width={30} height={20} />
               </a>
             </li>

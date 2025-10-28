@@ -1,9 +1,11 @@
+// src/app/layout.tsx
 import LayoutWrapper from './components/LayoutWrapper';
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import "./styles";
+import RipplesScript from './components/RipplesScript';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,8 +27,11 @@ export default function RootLayout({
         <meta name="author" content="Suhail Mujtabir Fuad" />
         <meta name="keywords" content="Wultyc, Welcome, Notebook, Welcome Notebook, Suhail Mujtabir Fuad," />
       </head>
-      <body className={inter.className}> <LayoutWrapper>
-        {children}</LayoutWrapper>
+      <body className={inter.className}> 
+        <LayoutWrapper>
+          {children}
+        </LayoutWrapper>
+        <RipplesScript />
         {/* Vendor libraries: load before interactive scripts */}
         {/* Core libraries */}
         <Script
@@ -42,17 +47,17 @@ export default function RootLayout({
         <Script src="/js/tiny-slider.js" strategy="beforeInteractive" />
         <Script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" strategy="beforeInteractive" />
         
-  {/* jQuery plugins - must load after jQuery */}
-  <Script src="https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js" strategy="beforeInteractive" />
-        
         {/* Custom scripts - load after all libraries */}
         <Script src="/js/tiny-slider-init.js" strategy="afterInteractive" />
         <Script src="/js/mklb.js" strategy="afterInteractive" />
         <Script src="/js/counter.init.js" strategy="afterInteractive" />
-        <Script src="/js/ripple.init.js" strategy="afterInteractive" />
         <Script src="/js/typed.init.js" strategy="afterInteractive" />
-        <Script src="/js/switcher.js" strategy="afterInteractive" />
-        <Script src="/js/app.js" strategy="afterInteractive" />
+        
+        {/* REMOVED THESE LINES: */}
+        {/* <Script src="https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js" strategy="beforeInteractive" /> */}
+        {/* <Script src="/js/ripple.init.js" strategy="afterInteractive" /> */}
+        {/* <Script src="/js/switcher.js" strategy="afterInteractive" /> */}
+        {/* <Script src="/js/app.js" strategy="afterInteractive" /> */}
       </body>
     </html>
   );

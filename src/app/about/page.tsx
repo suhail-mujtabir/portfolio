@@ -8,7 +8,7 @@ import Navbar from '../components/Navbar';
 const About: React.FC = () => {
   return (
     <div>
-      <div id="home" className="hero-area position-relative bg-half-120" style={{ background: 'url(/img/bg-hero.jpg) center center' }}>
+      <div id="home" className="hero-area position-relative bg-half-120 water" style={{ background: 'url(/img/bg-hero.jpg) center center' }}>
         <div className="bg-overlay bg-overlay-white"></div>
         <div id="counter" className="container">
           <div className="row justify-content-center">
