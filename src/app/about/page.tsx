@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Script from 'next/script';
-import Navbar from '../components/Navbar';
+
 import { useTyped } from '../hooks/useTyped';
 import BackToTop from '../components/BackToTop';
 
@@ -39,7 +39,6 @@ const About: React.FC = () => {
         </div>
       </div>
 
-      <Navbar />
 
       <section id="services" className="section pb-0 mb-4">
         <div className="container">
@@ -143,43 +142,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <div>
-        <footer className="footer bg-light">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-12 text-center">
-                <span className="footer-logo text-black" style={{ cursor: 'pointer' }}>
-                  Social Media
-                </span>
-                <p className="para-desc mx-auto mt-5 text-black">Find me on social media</p>
-                <ul className="list-unstyled mb-0 mt-4 social-icon">
-                  <li className="list-inline-item me-1">
-                    <a target="_blank" href="https://github.com/suhail-mujtabir" className="social-icon-circle" rel="noreferrer">
-                      <Image src="/img/github.svg" alt="GitHub" width={20} height={20} />
-                    </a>
-                    <a target="_blank" href="https://www.facebook.com/suhail.mujtabir/" className="social-icon-circle" rel="noreferrer">
-                      <Image src="/img/facebook.svg" alt="Facebook" width={20} height={20} />
-                    </a>
-                    <a target="_blank" href="https://www.instagram.com/suhail.mujtabir/" className="social-icon-circle" rel="noreferrer">
-                      <Image src="/img/instagram.svg" alt="Instagram" width={20} height={20} />
-                    </a>
-                    <a target="_blank" href="https://t.me/Suhail_Mujtabir" className="social-icon-circle" rel="noreferrer">
-                      <Image src="/img/telegram.svg" alt="Telegram" width={20} height={20} />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <footer className="footer footer-bar bg-black">
-          <div className="container text-foot text-center">
-            <p className="mb-0 text-white-50">&copy; Suhail Mujtabir Fuad.</p>
-          </div>
-        </footer>
-      </div>
-
       {/* Replace old back-to-top with React component */}
       <BackToTop />
     </div>

@@ -21,6 +21,6 @@
 /* Add smooth scrolling to the entire page */
 html,
 body {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   scroll-padding-top: 70px; /* Add padding for fixed header */
 }

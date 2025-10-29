@@ -6,11 +6,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useStickyNav } from '../hooks/useStickyNav';
-
+import { useEffect } from 'react';
 const Navbar: React.FC = () => {
   const pathname = usePathname();
   const isSticky = useStickyNav();
-
+ useEffect(() => {
+  }, [isSticky]);
   const getLinkClass = (path: string) => {
     // Handle the base path separately
     if (path === '/' && pathname === '/') {
